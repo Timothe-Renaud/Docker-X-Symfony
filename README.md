@@ -37,16 +37,16 @@ docker exec -u 1000 -it $(docker ps -aqf « name=php71 ») bash;
 ***
 
 Soit en allant sur le dashboard de docker, dans l'onglet "container list", et vous choisissé le container lancer avec php.
-Selectionné le button "CLI" et hop un terminal vas souvrire directement dans le repertoir '/var/'
+Selectionné le button "CLI" et hop un terminal vas souvrire directement dans le repertoir '/www/'
 
 Vous arrivez dans le répertoire www, vous pouvez donc exécuter votre commande favorite :
 
 ***
-composer create-project symfony/website-skeleton stackSf
+composer create-project symfony/website-skeleton 'MyApp'
 ***
 
 Surtout ne pas oublier le pack apache :
 
 composer require symfony/apache-pack
 
-Il n’y a plus qu’à se rendre sur stacksf.localhost:9071 et 9072, et vérifier que les version de PHP soient bien différentes.
+Il n’y a plus qu’à se rendre sur MyApp.localhost:9071 et 9072, et vérifier que les version de PHP soient bien différentes.
